@@ -11,42 +11,43 @@ Debes tratar de obtener las siguientes informaciones:
 ## Apartado A) Máquina Windows.
 
 ### Volcado de memoria
-![](Pasted%20image%2020240207174001.png)
+![](imagenes/Pasted%20image%2020240207174001.png)
 
-![](Pasted%20image%2020240207174130.png)
+![](imagenes/Pasted%20image%2020240207174130.png)
 
-![](Pasted%20image%2020240207174151.png)
+![](imagenes/Pasted%20image%2020240207174151.png)
 
-![](Pasted%20image%2020240207174402.png)
+![](imagenes/Pasted%20image%2020240207174402.png)
 
 
 ### Volcado de disco duro
 
-![](Pasted%20image%2020240207174451.png)
+![](imagenes/Pasted%20image%2020240207174451.png)
 
-![](Pasted%20image%2020240207174511.png)
-
-
-![](Pasted%20image%2020240207174545.png)
-
-![](Pasted%20image%2020240207174653.png)
-
-![](Pasted%20image%2020240207174704.png)
-
-![](Pasted%20image%2020240207174930.png)
-
-![](Pasted%20image%2020240207175044.png)
+![](imagenes/Pasted%20image%2020240207174511.png)
 
 
-![](Pasted%20image%2020240207175102.png)
+![](imagenes/Pasted%20image%2020240207174545.png)
 
-![](Pasted%20image%2020240207181038.png)
+![](imagenes/Pasted%20image%2020240207174653.png)
 
-![](Pasted%20image%2020240207181403.png)
+![](imagenes/Pasted%20image%2020240207174704.png)
 
-![](Pasted%20image%2020240207182648.png)
+![](imagenes/Pasted%20image%2020240207174930.png)
 
-![](Pasted%20image%2020240207182708.png)
+![](imagenes/Pasted%20image%2020240207175044.png)
+
+
+![](imagenes/Pasted%20image%2020240207175102.png)
+
+![](imagenes/Pasted%20image%2020240207181038.png)
+
+![](imagenes/Pasted%20image%2020240207181403.png)
+
+![](imagenes/Pasted%20image%2020240207182648.png)
+
+![](imagenes/Pasted%20image%2020240207182708.png)
+
 
 
 #### 1. Procesos en ejecución.
