@@ -48,64 +48,181 @@ Debes tratar de obtener las siguientes informaciones:
 
 ![](imagenes/Pasted%20image%2020240207182708.png)
 
+### Volcado de registros
+![](imagenes/Pasted%20image%2020240207200008.png)
+
+![](imagenes/Pasted%20image%2020240207200045.png)
+
+
+![](imagenes/Pasted%20image%2020240207200101.png)
+
+
+### Autopsy
+
+![](imagenes/Pasted%20image%2020240215202452.png)
+
+![](imagenes/Pasted%20image%2020240215202756.png)
+
+![](imagenes/Pasted%20image%2020240215203034.png)
+
+![](imagenes/Pasted%20image%2020240215203059.png)
+
+
+![](imagenes/Pasted%20image%2020240215203122.png)
+
+
+![](imagenes/Pasted%20image%2020240215203146.png)
+
+
+![](imagenes/Pasted%20image%2020240215203317.png)
+
+
+![](imagenes/Pasted%20image%2020240215203606.png)
+
+
+
+
 
 
 #### 1. Procesos en ejecución.
+```bash
+python vol.py -f "/mnt/forense/windows/memoria/memdump.mem" windows.pslist.PsList
+```
 
-2. Servicios en ejecución.
+![](imagenes/Pasted%20image%2020240216211118.png)
+#### 2. Servicios en ejecución.
 
-3. Puertos abiertos.
+```bash
+python vol.py -f "/mnt/forense/windows/memoria/memdump.mem" windows.getservicesids.GetServiceSIDs
+```
 
-4. Conexiones establecidas por la máquina.
+![](imagenes/Pasted%20image%2020240216211328.png)
+#### 3. Puertos abiertos.
 
-5. Sesiones de usuario establecidas remotamente.
+```bash
+python vol.py -f "/mnt/forense/windows/memoria/memdump.mem" windows.netstat.NetStat
+```
 
-6. Ficheros transferidos recientemente por NetBios.
+![](imagenes/Pasted%20image%2020240216211500.png)
+#### 4. Conexiones establecidas por la máquina.
 
-7. Contenido de la caché DNS.
+```bash
+python vol.py -f "/mnt/forense/windows/memoria/memdump.mem" windows.netscan.NetScan
+```
 
-8. Variables de entorno.
+![](imagenes/Pasted%20image%2020240216211637.png)
+#### 5. Sesiones de usuario establecidas remotamente.
 
-9. Dispositivos USB conectados
+```bash
+python vol.py -f "/mnt/forense/windows/memoria/memdump.mem" windows.sessions.Sessions
+```
 
-10. Redes wifi utilizadas recientemente.
+![](imagenes/Pasted%20image%2020240216211839.png)
+#### 6. Ficheros transferidos recientemente por NetBios.
 
-11. Configuración del firewall de nodo.
+#### 7. Contenido de la caché DNS.
 
-12. Programas que se ejecutan en el Inicio.
+#### 8. Variables de entorno.
 
-13. Asociación de extensiones de ficheros y aplicaciones.
+```bash
+python vol.py -f "/mnt/forense/windows/memoria/memdump.mem" windows.envars.Envars
+```
 
-14. Aplicaciones usadas recientemente.
+![](imagenes/Pasted%20image%2020240216213402.png)
+#### 9. Dispositivos USB conectados
 
-15. Ficheros abiertos recientemente.
+![](imagenes/Pasted%20image%2020240216191124.png)
 
-16. Software Instalado.
+#### 10. Redes wifi utilizadas recientemente.
 
-17. Contraseñas guardadas.
+#### 11. Configuración del firewall de nodo.
 
-18. Cuentas de Usuario
+#### 12. Programas que se ejecutan en el Inicio.
 
-19. Historial de navegación y descargas. Cookies.
+#### 13. Asociación de extensiones de ficheros y aplicaciones.
 
-20. Volúmenes cifrados
+![](imagenes/Pasted%20image%2020240216191213.png)
 
-21. Archivos con extensión cambiada.
+![](imagenes/Pasted%20image%2020240216191343.png)
 
-22. Archivos eliminados.
 
-23. Archivos Ocultos.
+![](imagenes/Pasted%20image%2020240216191529.png)
 
-24. Archivos que contienen una cadena determinada.
+![](imagenes/Pasted%20image%2020240216191634.png)
 
-25. Búsqueda de imágenes por ubicación.
 
-26. Búsqueda de archivos por autor.
+![](imagenes/Pasted%20image%2020240216191749.png)
 
-Apartado B) Máquina Linux.
+
+
+#### 14. Aplicaciones usadas recientemente.
+
+![](imagenes/Pasted%20image%2020240216191904.png)
+
+![](imagenes/Pasted%20image%2020240216192052.png)
+
+#### 15. Ficheros abiertos recientemente.
+
+![](imagenes/Pasted%20image%2020240216192247.png)
+
+![](imagenes/Pasted%20image%2020240216193038.png)
+
+#### 16. Software Instalado.
+
+![](imagenes/Pasted%20image%2020240216193131.png)
+
+
+
+#### 17. Contraseñas guardadas.
+![](imagenes/Pasted%20image%2020240216214047.png)
+
+#### 18. Cuentas de Usuario
+
+![](imagenes/Pasted%20image%2020240216193645.png)
+
+
+
+#### 19. Historial de navegación y descargas. Cookies.
+
+![](imagenes/Pasted%20image%2020240216193755.png)
+
+
+![](imagenes/Pasted%20image%2020240216193828.png)
+
+![](imagenes/Pasted%20image%2020240216193925.png)
+
+![](imagenes/Pasted%20image%2020240216194022.png)
+
+#### 20. Volúmenes cifrados
+
+![](imagenes/Pasted%20image%2020240216194851.png)
+
+#### 21. Archivos con extensión cambiada.
+
+![](imagenes/Pasted%20image%2020240216194054.png)
+
+![](imagenes/Pasted%20image%2020240216194219.png)
+
+#### 22. Archivos eliminados.
+
+![](imagenes/Pasted%20image%2020240216194339.png)
+
+![](imagenes/Pasted%20image%2020240216194546.png)
+
+#### 23. Archivos Ocultos.
+
+![](imagenes/Pasted%20image%2020240216214223.png)
+
+#### 24. Archivos que contienen una cadena determinada.
+
+#### 25. Búsqueda de imágenes por ubicación.
+
+![](imagenes/Pasted%20image%2020240216201149.png)
+
+#### 26. Búsqueda de archivos por autor.
+
+![](imagenes/Pasted%20image%2020240216201325.png)
+
+## Apartado B) Máquina Linux.
 
 Intenta realizar las mismas operaciones en una máquina Linux para aquellos apartados que tengan sentido y no se realicen de manera idéntica a Windows.
-
-Apartado C)
-
-En un dispositivo Android, trata de hacer un volcado de memoria y recuperar información de ubicación, llamadas, mensajes, aplicaciones de mensajería, perfiles en redes sociales, etc...
