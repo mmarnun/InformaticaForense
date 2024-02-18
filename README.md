@@ -575,28 +575,65 @@ systemctl list-unit-files --type=service | grep enabled
 
 #### 13. Asociación de extensiones de ficheros y aplicaciones.
 
+En el desplegable `File Types`, veremos más donde encontraremos las diferentes extensiones.
+
 ![](imagenes/Pasted%20image%2020240218124202.png)
 
+Mostramos los archivos con extensión de imágenes.
+
 ![](imagenes/Pasted%20image%2020240218203151.png)
+
+Con extensión para PDFs.
 
 ![](imagenes/Pasted%20image%2020240218124425.png)
 
 ![](imagenes/Pasted%20image%2020240218124532.png)
 
+De HTML.
 
 ![](imagenes/Pasted%20image%2020240218124624.png)
 
 #### 14. Aplicaciones usadas recientemente.
 
+El siguiente comando mostrará el historial de los comandos ejecutados, filtrado para que muestre la segunda columna de la salida del comando, sort lo ordenará alfabéticamente, uniq elimina las lineas duplicadas y el parámetro va a contar cuántas veces ha sido usado, son el siguiente sort lo ordenara númericamente  de mayor a menor frecuencia de uso y finalmente head muestra solo las 10 primeras lineas entonces solo los 10 más usados.
+
+```bash
+history | awk '{print $2}' | sort | uniq -c | sort -nr | head
+```
+
+![](imagenes/Pasted%20image%2020240218220210.png)
 #### 15. Ficheros abiertos recientemente.
 
+Lista los archivos abiertos por procesos.
+
+```bash
+lsof
+```
+
+![](imagenes/Pasted%20image%2020240218215832.png)
+
 #### 16. Software Instalado.
+
+Muestra el software que está instalado en el sistema.
+
+```bash
+dpkg --get-selections
+```
 
 ![](imagenes/Pasted%20image%2020240218192650.png)
 
 #### 17. Contraseñas guardadas.
 
+Desde el mismo navegador donde se guardan las contraseñas podemos visualizar las contraseñas.
+
 ![](imagenes/Pasted%20image%2020240218193451.png)
+
+
+Muestra el contenido del archivo que almacena información sobre las contraseñas de los usuarios en el sistema.
+
+```bash
+cat /etc/shadow
+```
 
 ![](imagenes/Pasted%20image%2020240218193746.png)
 
@@ -604,39 +641,77 @@ systemctl list-unit-files --type=service | grep enabled
 
 #### 18. Cuentas de Usuario
 
+Muestra el contenido del archivo, que contiene información sobre los usuarios del sistema
+
+```bash
+cat /etc/passwd
+```
+
+
 ![](imagenes/Pasted%20image%2020240218193541.png)
 
 #### 19. Historial de navegación y descargas. Cookies.
 
+Para ver el historial de navegación iremos a `Web History`
+
 ![](imagenes/Pasted%20image%2020240218124803.png)
+
+Para ver las búsquedas en `Web Search`
 
 ![](imagenes/Pasted%20image%2020240218124823.png)
 
+Las descargas en `Web Downloads`
+
 ![](imagenes/Pasted%20image%2020240218202958.png)
+
+Y las cookies en `Web Cookies`
 
 ![](imagenes/Pasted%20image%2020240218124912.png)
 
 #### 20. Volúmenes cifrados
 
-![](imagenes/Pasted%20image%2020240218194753.png)
+Esto listará todos los archivos con extensión `.gpg` en el sistema y sus subdirectorios.
+La extensión indica que es un archivo cifrado con gpg.
+
+```bash
+find / -type f -name "*.gpg"
+```
+
+![](imagenes/Pasted%20image%2020240218214408.png)
 #### 21. Archivos con extensión cambiada.
+
+Para ver los archivos que tienen una extensión cambiada o no adecuada, vamos a `Extension Mismatch Detected` veremos varios archivos.
+
+Uno de ellos es un .dfs cuando realmente es una imagen.
 
 ![](imagenes/Pasted%20image%2020240218125249.png)
 
 #### 22. Archivos eliminados.
 
+En `Deleted Files` podremos ver archivos eliminados completamente.
+
+![](imagenes/Pasted%20image%2020240218214848.png)
+
 #### 23. Archivos Ocultos.
+
+Buscaremos entre los directorios y los archivos que tengan un "." delante del nombre son los ocultos.
 
 ![](imagenes/Pasted%20image%2020240218125916.png)
 
 #### 24. Archivos que contienen una cadena determinada.
 
+Para encontrar archivos que tienen una cadena deberemos de buscar con `Keyword Search` y introducimos la cadena a buscar. Podemos ver que ha encontrado un archivo donde existe la cadena.
+
 ![](imagenes/Pasted%20image%2020240218130407.png)
 
 #### 25. Búsqueda de imágenes por ubicación.
 
+Para encontrar la ubicación de las imágenes, deberemos ir a `Geolocation`, se abrirá una ventana nueva como la de la imagen con un mapa donde se verán marcadores en ubicaciones y al hacer click podemos ver la imagen, la fecha y hora capturada, coordenadas modelo del dispositivo y creador. Vemos que la imagen se hizo en Utrera, concretamente en la feria.
+
 ![](imagenes/Pasted%20image%2020240218130517.png)
 
 #### 26. Búsqueda de archivos por autor.
+
+Para los archivos por autor vamos al artefacto `Metadata` y podemos ver que aparecen diferentes archivos y podemos ver el autor en el apartado de `Owner`.
 
 ![](imagenes/Pasted%20image%2020240218130550.png)
