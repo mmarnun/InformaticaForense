@@ -90,6 +90,7 @@ Hasta que finalmente se ha volcado.
 ### Volcado de registros
 
 De igual manera que los anteriores pero con la opción `Obtain Protected Files...`.
+
 ![](imagenes/Pasted%20image%2020240207200008.png)
 
 
@@ -251,7 +252,9 @@ aa
 #### 11. Configuración del firewall de nodo.
 
 Mostraremos la configuración de las reglas del firewall, por ejemplo la destacada:
-- **Valor:** v2.30jAction Allow Active=TRUE(Dir=Out Protocol=6 Profile=Domain Profile=Private App=%SystemRoot%\system32\svchost.exe/Svc=CDPSvc)
+
+`v2.30jAction Allow Active=TRUE(Dir=Out Protocol=6 Profile=Domain Profile=Private App=%SystemRoot%\system32\svchost.exe/Svc=CDPSvc)`
+
 El valor indica que la regla del firewall está configurada para permitir el tráfico saliente en el protocolo TCP a través del puerto 7680 para el servicio CDPSvc.
 Los demás valores de la tabla muestran información similar sobre otras reglas del firewall.
 
@@ -560,6 +563,8 @@ nmclo c show
 ![](imagenes/Pasted%20image%2020240218182744.png)
 ![](imagenes/Pasted%20image%2020240218182830.png)
 #### 11. Configuración del firewall de nodo.
+
+Para la configuración del firewall depende del que se use en el sistema en este caso iptables pues con el parámetro -L listaremos las reglas.
 
 ![](imagenes/Pasted%20image%2020240218183009.png)
 
